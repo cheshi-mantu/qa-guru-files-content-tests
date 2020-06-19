@@ -16,7 +16,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 @Epic("QA.GURU automation course")
 @Story("Sample PDF File tests")
-@Tag("files_tests")
+@Tag("local_files_tests")
 class PdfFileContentTests {
 
     @Test

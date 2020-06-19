@@ -66,8 +66,13 @@ tasks.withType(Test) {
 }
 
 
-task files_tests(type: Test) {
+task local_files_tests(type: Test) {
     useJUnitPlatform {
-        includeTags 'files_tests'
+        includeTags 'local_files_tests'
+    }
+}
+task ui_files_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'ui_files_tests'
     }
 }
