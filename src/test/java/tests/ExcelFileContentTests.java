@@ -20,8 +20,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 class ExcelFileContentTests {
 
     @Test
-    @Description("Local Sample PDF file test against test string")
-    @DisplayName("Local sample PDF file test. Must contain test string.")
+    @Description("Local Sample XL file test against test string")
+    @DisplayName("Local sample XL file test. Must contain test string.")
     void successfulSearchForTextInExcelFile() throws IOException {
         String expectedFileText = "AAABBBCCCDDDEEEFFFGGG";
         String sampleFilePath = "src/test/resources/files/sample_xl.xlsx";
