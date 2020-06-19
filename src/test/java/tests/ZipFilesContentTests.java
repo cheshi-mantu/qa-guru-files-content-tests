@@ -28,7 +28,7 @@ class ZipFilesContentTests extends TestBase {
         final String STREXPECTED = "AAABBBCCCDDDEEEFFFGGGHHH";
         ZipHelper.unzip(source, destination);
 
-        String txtFromFile = new FileUtils().readStringFromFile(destination + "/test_file-001.txt");
+        String txtFromFile = new FileUtils().readStringFromFile(destination + "/test_file.txt");
 
         System.out.println("Actual text from file: \n" + txtFromFile);
             step("Check file content", () -> {
@@ -46,7 +46,7 @@ class ZipFilesContentTests extends TestBase {
         final String STREXPECTED = "AAABBBCCCDDDEEEFFFGGGHHH";
         ZipHelper.unzip(source, destination, password);
 
-        String txtFromFile = new FileUtils().readStringFromFile(destination + "/test_file-001.txt");
+        String txtFromFile = new FileUtils().readStringFromFile(destination + "/test_file.txt");
 
         System.out.println("Actual text from file: \n" + txtFromFile);
         step("Check file content", () -> {
