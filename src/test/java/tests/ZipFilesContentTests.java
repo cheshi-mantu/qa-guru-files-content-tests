@@ -36,8 +36,8 @@ class ZipFilesContentTests extends TestBase {
             });
     }
     @Test
-    @Description("Unzip zip archive without password, read text file, compare content against expected string")
-    @DisplayName("Unzip and check txt file content to have expected string")
+    @Description("Unzip zip archive with password, read text file, compare content against expected string")
+    @DisplayName("Unzip protected zip and check txt file content to have expected string")
     void succUnzipWithPasswordTxtFileTextMatch() {
         String source = "src/test/resources/files/zip_archive_3files_pass_zaza.zip";
         String destination = "src/test/resources/files/unzip_pass/";
