@@ -1,7 +1,5 @@
 import static java.lang.System.*
-
 buildscript {
-
     repositories {
         mavenCentral()
         jcenter()
@@ -26,14 +24,13 @@ defaultTasks 'help'
 
 ext {
     allureVersion = '2.13.3'
-    junitVersion = '5.6.0'
+    junitVersion = '5.6.2'
 }
 
 repositories {
     jcenter()
     mavenCentral()
 }
-
 
 allure {
     version = "${allureVersion}"
@@ -43,6 +40,7 @@ allure {
         version = "${allureVersion}"
     }
 }
+
 
 dependencies {
     testImplementation 'org.aspectj:aspectjweaver:1.9.5'

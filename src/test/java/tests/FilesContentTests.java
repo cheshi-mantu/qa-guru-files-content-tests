@@ -7,12 +7,8 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
-
-import static helpers.Environment.*;
 import static io.qameta.allure.Allure.step;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Epic("QA.GURU QA automation course")
 @Story("Files content testing.")
@@ -24,13 +20,12 @@ class FilesContentTests extends TestBase {
     }
 
     @Test
-    @Description("")
-    @DisplayName("")
-    void pageOpenButtonClickClosestA() {
-            step ("step desc", () -> open(url));
+    @Description("Description")
+    @DisplayName("DisplayName")
+    void succTxtFileTextMatch() {
+//            step ("step desc", () -> open(url));
             step("Step desc", () -> {
-                $(byText("Вклады")).closest("a").click();
-                $("h1").shouldHave(text("Откройте вклад"));
+                assertTrue(true);
             });
             }
 
