@@ -22,7 +22,7 @@ class FilesContentTests extends TestBase {
     @DisplayName("Check txt file content to have expected string")
     void succTxtFileTextMatch() {
         final String STREXPECTED = "AAABBBCCCDDDEEEFFFGGGHHH";
-        String txtFromFile = new FileUtils().readStringFromFile("src/test/java/files/test_file.txt");
+        String txtFromFile = new FileUtils().readStringFromFile("src/test/resources/files/test_file.txt");
         System.out.println("Actual text from file: \n" + txtFromFile);
             step("Check file content", () -> {
 //                assertTrue(txtFromFile.contains(STREXPECTED), "Expected text: " + STREXPECTED + "vs. " + txtFromFile);

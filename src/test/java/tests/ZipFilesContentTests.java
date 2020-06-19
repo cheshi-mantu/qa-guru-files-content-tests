@@ -40,7 +40,7 @@ class ZipFilesContentTests extends TestBase {
     @DisplayName("Unzip and check txt file content to have expected string")
     void succUnzipWithPasswordTxtFileTextMatch() {
         String source = "src/test/resources/files/zip_archive_3files_pass_zaza.zip";
-        String destination = "src/test/resources/files/unzip/";
+        String destination = "src/test/resources/files/unzip_pass/";
         String password = "zaza";
 
         final String STREXPECTED = "AAABBBCCCDDDEEEFFFGGGHHH";
