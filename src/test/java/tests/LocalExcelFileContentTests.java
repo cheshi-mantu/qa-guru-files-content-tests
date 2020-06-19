@@ -1,6 +1,6 @@
 package tests;
 
-import com.codeborne.pdftest.PDF;
+import com.codeborne.xlstest.XLS;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
@@ -15,21 +15,21 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 
 @Epic("QA.GURU automation course")
-@Story("Sample PDF File tests")
+@Story("Sample Excel file tests")
 @Tag("local_files_tests")
-class PdfFileContentTests {
+class LocalExcelFileContentTests {
 
     @Test
-    @Description("Local Sample PDF file test against test string")
-    @DisplayName("Local sample PDF file test. Must contain test string.")
-    void successfulSearchForTextInPdfFile() throws IOException {
+    @Description("Local Sample XL file test against test string")
+    @DisplayName("Local sample XL file test. Must contain test string.")
+    void successfulSearchForTextInExcelFile() throws IOException {
         String expectedFileText = "AAABBBCCCDDDEEEFFFGGG";
-        String sampleFilePath = "src/test/resources/files/sample_pdf.pdf";
+        String sampleFilePath = "src/test/resources/files/sample_xl.xlsx";
 
         File sampleFile = new File(sampleFilePath);
-        PDF pdfFile = new PDF(sampleFile);
+        XLS xlFile = new XLS(sampleFile);
 
-        assertThat(pdfFile, PDF.containsText(expectedFileText));
+        assertThat(xlFile, XLS.containsText(expectedFileText));
             }
 
 }

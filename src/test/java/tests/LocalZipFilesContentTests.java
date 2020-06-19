@@ -16,7 +16,7 @@ import static org.hamcrest.core.StringContains.containsString;
 @Epic("QA.GURU QA automation course")
 @Story("Files content testing after unzip.")
 @Tag("local_files_tests")
-class ZipFilesContentTests extends TestBase {
+class LocalZipFilesContentTests extends TestBase {
 
     @Test
     @Description("Unzip zip archive without password, read text file, compare content against expected string")

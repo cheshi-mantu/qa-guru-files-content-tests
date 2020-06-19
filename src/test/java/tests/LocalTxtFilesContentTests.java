@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Epic("QA.GURU QA automation course")
 @Story("Files content testing.")
 @Tag("local_files_tests")
-class FilesContentTests extends TestBase {
+class LocalTxtFilesContentTests extends TestBase {
 
 
     @Test

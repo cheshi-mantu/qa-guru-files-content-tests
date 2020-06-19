@@ -28,7 +28,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 @Epic("QA.GURU automation course")
 @Story("File tests with download from site UI")
 @Tag("ui_files_tests")
-class UiFileTests {
+class UiTxtFileTests {
 
     @Test
     @Description("Log-in, change URL, locate file, downlowad file, check content against test string")
