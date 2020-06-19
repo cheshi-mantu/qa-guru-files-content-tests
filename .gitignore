@@ -36,3 +36,5 @@ target/
 .vscode
 .allure/
 gradlew.bat
+/src/test/resources/files/unzip/
+/src/test/resources/files/unzip_pass/
