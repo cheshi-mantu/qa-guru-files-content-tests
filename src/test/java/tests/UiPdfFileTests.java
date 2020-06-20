@@ -4,7 +4,6 @@ import com.codeborne.pdftest.PDF;
 import com.codeborne.selenide.Condition;
 import helpers.Environment;
 import helpers.FileReadHelper;
-import helpers.FileUtils;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
@@ -13,14 +12,12 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 
@@ -33,10 +30,7 @@ class UiPdfFileTests {
     @Description("Log-in, change URL, locate file, downlowad file, check content against test string")
     @DisplayName("Text file web UI test")
     void successfulSearchForTextInFile()  throws IOException {
-//        Configuration.reportsFolder = <desired location for downloaded files>; чтобы поменять путь скачанных файлов
-
         String expectedFileText = "AAABBBCCCDDDEEEFFF";
-
         String jenkinsLogin = FileReadHelper.getStringFromFile("jusername.secret");
         String jenkinsPassword = FileReadHelper.getStringFromFile("jpassword.secret");
         String jUrl =  FileReadHelper.getStringFromFile("jurl.secret");
@@ -62,7 +56,5 @@ class UiPdfFileTests {
 
         PDF pdfFile = new PDF(sampleFile);
         assertThat(pdfFile, PDF.containsText(expectedFileText));
-
     }
-
 }

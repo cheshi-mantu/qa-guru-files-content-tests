@@ -30,6 +30,5 @@ class LocalExcelFileContentTests {
         XLS xlFile = new XLS(sampleFile);
 
         assertThat(xlFile, XLS.containsText(expectedFileText));
-            }
-
+    }
 }

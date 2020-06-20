@@ -33,7 +33,6 @@ class UiExcelFileTests {
 //        Configuration.reportsFolder = <desired location for downloaded files>; чтобы поменять путь скачанных файлов
 
         String expectedFileText = "AAABBBCCCDDDEEEFFF";
-
         String jenkinsLogin = FileReadHelper.getStringFromFile("jusername.secret");
         String jenkinsPassword = FileReadHelper.getStringFromFile("jpassword.secret");
         String jUrl =  FileReadHelper.getStringFromFile("jurl.secret");
@@ -54,12 +53,9 @@ class UiExcelFileTests {
         $(withText(jenkinsLogin)).shouldBe(Condition.visible);
 
         open(jUrl + "/job/cheshi_mantu_files_testing_tlg_bot_via_curl/ws/src/test/resources/files/");
-
         File sampleFile = $("[href='sample_xl.xlsx']").download();
-
         XLS excelFile = new XLS(sampleFile);
+
         assertThat(excelFile, XLS.containsText(expectedFileText));
-
     }
-
 }

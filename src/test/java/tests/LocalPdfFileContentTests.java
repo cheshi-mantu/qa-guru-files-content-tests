@@ -30,6 +30,5 @@ class LocalPdfFileContentTests {
         PDF pdfFile = new PDF(sampleFile);
 
         assertThat(pdfFile, PDF.containsText(expectedFileText));
-            }
-
+    }
 }
