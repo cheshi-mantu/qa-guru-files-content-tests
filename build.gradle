@@ -66,6 +66,8 @@ dependencies {
 
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
     testImplementation "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testImplementation "com.browserup:browserup-proxy-core:2.1.1"
+
 }
 
 tasks.withType(JavaCompile) {
@@ -85,5 +87,11 @@ task local_files_tests(type: Test) {
 task ui_files_tests(type: Test) {
     useJUnitPlatform {
         includeTags 'ui_files_tests'
+    }
+}
+
+task selenide_download_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'selenide_downloads'
     }
 }
