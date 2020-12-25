@@ -72,7 +72,7 @@ public class SelenideDownloadTests {
 
     }
     @Test
-    @Description("Download text file by href link text, assert name and length")
+    @Description("Download text file by href link text, assert name and length on selenoid")
     void selenideDownloadByHrefLinkViaSelenoid() throws FileNotFoundException {
         Configuration.remote = "http://192.168.1.123:4444/wd/hub/";
         MutableCapabilities capabilities = new MutableCapabilities();
@@ -93,7 +93,7 @@ public class SelenideDownloadTests {
 
     }
     @Test
-    @Description("Download text file by button click and get action")
+    @Description("Download text file by button click and get action on selenoid")
         //this test requires     testImplementation "com.browserup:browserup-proxy-core:2.1.1"
         //selenide intercepts the network requests using PROXY and then downloads intercepted file invoked by get action of a button
     void selenideDownloadByButtonGetActionSelenoidProxy() throws FileNotFoundException {
