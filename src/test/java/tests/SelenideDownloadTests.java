@@ -34,7 +34,8 @@ public class SelenideDownloadTests {
     }
     @Test
     @Description("Download text file by button click and get action")
-    //this test requires     testImplementation "com.browserup:browser-proxy-core:2.1.1"
+    //this test requires     testImplementation "com.browserup:browserup-proxy-core:2.1.1"
+    //selenide intercepts the network requests using PROXY and then downloads intercepted file invoked by get action of a button
     void selenideDownloadByButtonGetAction() throws FileNotFoundException {
         Configuration.proxyEnabled = true;
         Configuration.fileDownload = FileDownloadMode.PROXY;
